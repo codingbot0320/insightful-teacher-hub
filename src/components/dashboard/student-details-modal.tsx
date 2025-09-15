@@ -29,10 +29,10 @@ const getStudentData = (id: number) => {
   const students = {
     1: {
       id: 1,
-      name: "Emma Johnson",
-      email: "emma.johnson@school.edu",
-      grade: "12th Grade",
-      overallGPA: 3.92,
+      name: "Praveen Kumar",
+      email: "Praveen@school.edu",
+      grade: "8th Grade",
+      Percentage: 98,
       subjects: [
         { name: "Math", score: 98, grade: "A+", trend: "up" },
         { name: "Physics", score: 95, grade: "A", trend: "up" },
@@ -54,10 +54,10 @@ const getStudentData = (id: number) => {
     },
     2: {
       id: 2,
-      name: "Michael Chen",
-      email: "michael.chen@school.edu",
-      grade: "12th Grade",
-      overallGPA: 3.89,
+      name: "Rohit Pawar",
+      email: "Rohit@school.edu",
+      grade: "9th Grade",
+      Percentage: 94,
       subjects: [
         { name: "Math", score: 94, grade: "A", trend: "stable" },
         { name: "Physics", score: 97, grade: "A+", trend: "up" },
@@ -76,9 +76,86 @@ const getStudentData = (id: number) => {
       attendance: 94,
       assignments: { completed: 46, total: 47 },
       lastUpdated: "2024-01-15"
-    }
+    },
+    3: {
+      id: 3,
+      name: "Ananya Sharma",
+      email: "ananya@school.edu",
+      grade: "9th Grade",
+      Percentage: 89,
+      subjects: [
+        { name: "Math", score: 91, grade: "A", trend: "stable" },
+        { name: "Physics", score: 90, grade: "A+", trend: "up" },
+        { name: "Chemistry", score: 84, grade: "A", trend: "up" },
+        { name: "Biology", score: 76, grade: "B+", trend: "stable" }
+      ],
+      monthlyProgress: [
+        { month: "Jan", math: 80, physics: 90, chemistry: 85, biology: 83 },
+        { month: "Feb", math: 91, physics: 92, chemistry: 87, biology: 85 },
+        { month: "Mar", math: 99, physics: 94, chemistry: 89, biology: 87 },
+        { month: "Apr", math: 96, physics: 96, chemistry: 90, biology: 88 },
+        { month: "May", math: 85, physics: 97, chemistry: 91, biology: 88 }
+      ],
+      strengths: ["Physics Concepts", "Laboratory Skills", "Data Analysis"],
+      improvements: ["Mathematical Calculations", "Presentation Skills"],
+      attendance: 94,
+      assignments: { completed: 46, total: 47 },
+      lastUpdated: "2024-01-15"
     // Add more students as needed...
-  };
+  },
+    4: {
+      id: 4,
+      name: "Preeti Ghorpade",
+      email: "preeti@school.edu",
+      grade: "8th Grade",
+      Percentage: 80,
+      subjects: [
+        { name: "Math", score: 67, grade: "C", trend: "stable" },
+        { name: "Physics", score: 78, grade: "B+", trend: "Lower" },
+        { name: "Chemistry", score: 84, grade: "A", trend: "up" },
+        { name: "Biology", score: 76, grade: "B+", trend: "stable" }
+      ],
+      monthlyProgress: [
+        { month: "Jan", math: 80, physics: 90, chemistry: 85, biology: 83 },
+        { month: "Feb", math: 91, physics: 92, chemistry: 87, biology: 85 },
+        { month: "Mar", math: 99, physics: 94, chemistry: 89, biology: 87 },
+        { month: "Apr", math: 96, physics: 96, chemistry: 90, biology: 88 },
+        { month: "May", math: 85, physics: 97, chemistry: 91, biology: 88 }
+      ],
+      strengths: ["Physics Concepts", "Laboratory Skills", "Data Analysis"],
+      improvements: ["Mathematical Calculations", "Presentation Skills"],
+      attendance: 94,
+      assignments: { completed: 46, total: 47 },
+      lastUpdated: "2024-01-15"
+    // Add more students as needed...
+  },
+  5: {
+      id: 5,
+      name: "Deva",
+      email: "deva@school.edu",
+      grade: "11th Grade",
+      Percentage: 92,
+      subjects: [
+        { name: "Math", score: 95, grade: "A+", trend: "stable" },
+        { name: "Physics", score: 78, grade: "B+", trend: "Lower" },
+        { name: "Chemistry", score: 65, grade: "C", trend: "Lower" },
+        { name: "Biology", score: 76, grade: "B+", trend: "stable" }
+      ],
+      monthlyProgress: [
+        { month: "Jan", math: 80, physics: 90, chemistry: 85, biology: 83 },
+        { month: "Feb", math: 91, physics: 92, chemistry: 87, biology: 85 },
+        { month: "Mar", math: 99, physics: 94, chemistry: 89, biology: 87 },
+        { month: "Apr", math: 96, physics: 96, chemistry: 90, biology: 88 },
+        { month: "May", math: 85, physics: 97, chemistry: 91, biology: 88 }
+      ],
+      strengths: ["Physics Concepts", "Laboratory Skills", "Data Analysis"],
+      improvements: ["Mathematical Calculations", "Presentation Skills"],
+      attendance: 94,
+      assignments: { completed: 46, total: 47 },
+      lastUpdated: "2024-01-15"
+    // Add more students as needed...
+  },
+};
   
   return students[id as keyof typeof students] || students[1];
 };

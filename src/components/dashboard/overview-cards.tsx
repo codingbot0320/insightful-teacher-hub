@@ -4,7 +4,7 @@ import { Users, BookOpen, TrendingUp, Award } from "lucide-react";
 const overviewData = [
   {
     title: "Total Students",
-    value: "1,234",
+    value: "5",
     change: "+12%",
     changeType: "positive" as const,
     icon: Users,
@@ -20,7 +20,7 @@ const overviewData = [
   },
   {
     title: "Active Subjects",
-    value: "24",
+    value: "4",
     change: "+3",
     changeType: "positive" as const,
     icon: BookOpen,

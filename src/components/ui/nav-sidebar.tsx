@@ -34,13 +34,15 @@ const navItems = [
 export function NavSidebar({ activeTab, onTabChange, className }: NavSidebarProps) {
   return (
     <div className={cn("w-64 bg-card border-r border-border h-full", className)}>
-      <div className="p-6 border-b border-border">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-            <GraduationCap className="h-5 w-5 text-primary" />
-          </div>
-          <h2 className="text-xl font-bold text-foreground">GyaanSagar</h2>
-        </div>
+     <div className="flex items-center">
+              <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-[#415A77] to-[#778DA9] rounded-full flex items-center justify-center animate-pulse">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
+              <a className="text-2xl font-bold bg-gradient-to-r from-[#778DA9] to-[#E0E1DD] bg-clip-text text-transparent" href="http://localhost:5175/">
+                Gyaan Sagar
+              </a>
+            </div>
       </div>
       
       <ScrollArea className="h-full">

@@ -3,11 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const topStudents = [
-  { id: 1, name: "Emma Johnson", grade: "A+", score: 98, subject: "Mathematics", trend: "up" },
-  { id: 2, name: "Michael Chen", grade: "A+", score: 97, subject: "Physics", trend: "up" },
-  { id: 3, name: "Sarah Williams", grade: "A", score: 95, subject: "Chemistry", trend: "stable" },
-  { id: 4, name: "David Brown", grade: "A", score: 94, subject: "Biology", trend: "up" },
-  { id: 5, name: "Lisa Davis", grade: "A", score: 93, subject: "Mathematics", trend: "up" },
+  { id: 1, name: "Praveen Kumar", grade: "A+", score: 98, subject: "Mathematics", trend: "up" },
+  { id: 2, name: "Rohit Pawar", grade: "A+", score: 97, subject: "Physics", trend: "up" },
+  { id: 3, name: "Ananya Sharma", grade: "A", score: 95, subject: "Chemistry", trend: "stable" },
+  { id: 4, name: "Preeti Ghorpade", grade: "A", score: 94, subject: "Biology", trend: "up" },
+  { id: 5, name: "Deva", grade: "A", score: 93, subject: "Mathematics", trend: "up" },
 ];
 
 interface TopStudentsTableProps {

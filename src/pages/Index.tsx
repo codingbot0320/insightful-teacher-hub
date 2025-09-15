@@ -36,14 +36,8 @@ const Index = () => {
                 <p className="text-muted-foreground">Welcome back! Here's what's happening with your students.</p>
               </div>
               <div className="flex gap-2">
-                <Button variant="outline" size="sm">
-                  <RefreshCw className="h-4 w-4 mr-2" />
-                  Refresh
-                </Button>
-                <Button size="sm">
-                  <Download className="h-4 w-4 mr-2" />
-                  Export
-                </Button>
+                
+                
               </div>
             </div>
             <OverviewCards />
