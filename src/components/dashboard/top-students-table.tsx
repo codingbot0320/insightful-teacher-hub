@@ -3,14 +3,18 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const topStudents = [
-  { name: "Emma Johnson", grade: "A+", score: 98, subject: "Mathematics", trend: "up" },
-  { name: "Michael Chen", grade: "A+", score: 97, subject: "Science", trend: "up" },
-  { name: "Sarah Williams", grade: "A", score: 95, subject: "English", trend: "stable" },
-  { name: "David Brown", grade: "A", score: 94, subject: "History", trend: "up" },
-  { name: "Lisa Davis", grade: "A", score: 93, subject: "Geography", trend: "up" },
+  { id: 1, name: "Emma Johnson", grade: "A+", score: 98, subject: "Mathematics", trend: "up" },
+  { id: 2, name: "Michael Chen", grade: "A+", score: 97, subject: "Physics", trend: "up" },
+  { id: 3, name: "Sarah Williams", grade: "A", score: 95, subject: "Chemistry", trend: "stable" },
+  { id: 4, name: "David Brown", grade: "A", score: 94, subject: "Biology", trend: "up" },
+  { id: 5, name: "Lisa Davis", grade: "A", score: 93, subject: "Mathematics", trend: "up" },
 ];
 
-export function TopStudentsTable() {
+interface TopStudentsTableProps {
+  onStudentClick?: (studentId: number) => void;
+}
+
+export function TopStudentsTable({ onStudentClick }: TopStudentsTableProps) {
   return (
     <Card>
       <CardHeader>
@@ -22,7 +26,11 @@ export function TopStudentsTable() {
       <CardContent>
         <div className="space-y-4">
           {topStudents.map((student, index) => (
-            <div key={student.name} className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary/80 transition-colors">
+            <div 
+              key={student.name} 
+              className="flex items-center gap-4 p-3 rounded-lg bg-secondary/50 hover:bg-secondary/80 transition-colors cursor-pointer"
+              onClick={() => onStudentClick?.(student.id)}
+            >
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold">
                 {index + 1}
               </div>

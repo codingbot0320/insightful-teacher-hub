@@ -12,11 +12,9 @@ import {
 
 const performanceData = [
   { subject: "Math", average: 85, excellent: 92, needsImprovement: 78 },
-  { subject: "Science", average: 88, excellent: 95, needsImprovement: 82 },
-  { subject: "English", average: 82, excellent: 89, needsImprovement: 75 },
-  { subject: "History", average: 86, excellent: 93, needsImprovement: 79 },
-  { subject: "Geography", average: 84, excellent: 91, needsImprovement: 77 },
-  { subject: "Art", average: 90, excellent: 96, needsImprovement: 85 },
+  { subject: "Physics", average: 88, excellent: 95, needsImprovement: 82 },
+  { subject: "Chemistry", average: 82, excellent: 89, needsImprovement: 75 },
+  { subject: "Biology", average: 86, excellent: 93, needsImprovement: 79 },
 ];
 
 export function StudentPerformanceChart() {

@@ -5,12 +5,25 @@ import { StudentPerformanceChart } from "@/components/dashboard/student-performa
 import { GradeDistributionPie } from "@/components/dashboard/grade-distribution-pie";
 import { StudentProgressTrend } from "@/components/dashboard/student-progress-trend";
 import { TopStudentsTable } from "@/components/dashboard/top-students-table";
+import { StudentDetailsModal } from "@/components/dashboard/student-details-modal";
 import { AdminPanel } from "@/components/dashboard/admin-panel";
 import { Button } from "@/components/ui/button";
 import { Download, RefreshCw } from "lucide-react";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
+  const [selectedStudentId, setSelectedStudentId] = useState<number | null>(null);
+  const [isStudentModalOpen, setIsStudentModalOpen] = useState(false);
+
+  const handleStudentClick = (studentId: number) => {
+    setSelectedStudentId(studentId);
+    setIsStudentModalOpen(true);
+  };
+
+  const handleCloseStudentModal = () => {
+    setIsStudentModalOpen(false);
+    setSelectedStudentId(null);
+  };
 
   const renderContent = () => {
     switch (activeTab) {
@@ -40,7 +53,7 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <StudentProgressTrend />
-              <TopStudentsTable />
+              <TopStudentsTable onStudentClick={handleStudentClick} />
             </div>
           </div>
         );
@@ -59,7 +72,7 @@ const Index = () => {
         return (
           <div className="space-y-6">
             <h1 className="text-3xl font-bold text-foreground">Student Management</h1>
-            <TopStudentsTable />
+            <TopStudentsTable onStudentClick={handleStudentClick} />
           </div>
         );
       case "performance":
@@ -113,6 +126,11 @@ const Index = () => {
       <main className="flex-1 p-6 overflow-auto">
         {renderContent()}
       </main>
+      <StudentDetailsModal 
+        isOpen={isStudentModalOpen}
+        onClose={handleCloseStudentModal}
+        studentId={selectedStudentId}
+      />
     </div>
   );
 };
