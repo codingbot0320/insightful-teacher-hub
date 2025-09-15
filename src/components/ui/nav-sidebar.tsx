@@ -10,7 +10,8 @@ import {
   PieChart,
   Download,
   Home,
-  TrendingUp
+  TrendingUp,
+  GraduationCap
 } from "lucide-react";
 
 interface NavSidebarProps {
@@ -34,8 +35,12 @@ export function NavSidebar({ activeTab, onTabChange, className }: NavSidebarProp
   return (
     <div className={cn("w-64 bg-card border-r border-border h-full", className)}>
       <div className="p-6 border-b border-border">
-        <h2 className="text-xl font-bold text-foreground">Teacher's Dashboard</h2>
-        <p className="text-sm text-muted-foreground mt-1">Student Analytics Portal</p>
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+            <GraduationCap className="h-5 w-5 text-primary" />
+          </div>
+          <h2 className="text-xl font-bold text-foreground">GyaanSagar</h2>
+        </div>
       </div>
       
       <ScrollArea className="h-full">
